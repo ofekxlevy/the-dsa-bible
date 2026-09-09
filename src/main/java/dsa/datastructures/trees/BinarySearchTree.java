@@ -12,6 +12,7 @@ package dsa.datastructures.trees;
 public class BinarySearchTree<T extends Comparable<? super T>> extends BinaryTree<T> {
 
     // -------- constructor --------
+
     /**
      * Constructs an empty Binary Search Tree.
      * <p>
@@ -118,7 +119,7 @@ public class BinarySearchTree<T extends Comparable<? super T>> extends BinaryTre
     /**
      * Recursively finds the leftmost node in a subtree.
      */
-    private BinaryTreeNode<T> min(BinaryTreeNode<T> node) {
+    protected BinaryTreeNode<T> min(BinaryTreeNode<T> node) {
         if (node.left == null)
             return node;
 
@@ -142,7 +143,7 @@ public class BinarySearchTree<T extends Comparable<? super T>> extends BinaryTre
     /**
      * Recursively finds the rightmost node in a subtree.
      */
-    private BinaryTreeNode<T> max(BinaryTreeNode<T> node) {
+    protected BinaryTreeNode<T> max(BinaryTreeNode<T> node) {
         if (node.right == null)
             return node;
 
