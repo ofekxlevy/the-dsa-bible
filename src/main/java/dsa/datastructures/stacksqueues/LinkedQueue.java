@@ -27,6 +27,9 @@ public class LinkedQueue<T> implements Queue<T> {
         elements = new SinglyLinkedList<>();
     }
 
+
+    // -------- methods --------
+
     /**
      * Adds an element to the end of the queue.
      *
