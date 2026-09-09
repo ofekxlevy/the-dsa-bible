@@ -15,7 +15,7 @@ public class DynamicArray<T> implements List<T> {
     // -------- constructors --------
     /**
      * Creates an empty DynamicArray with the default capacity.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     @SuppressWarnings("unchecked")
@@ -26,7 +26,7 @@ public class DynamicArray<T> implements List<T> {
 
     /**
      * Creates an empty DynamicArray with the specified initial capacity.
-     *
+     * <p>
      * Time Complexity: O(n), where n is the requested capacity.
      */
     @SuppressWarnings("unchecked")
@@ -44,7 +44,7 @@ public class DynamicArray<T> implements List<T> {
     /**
      * Adds an element to the end of the list.
      * The internal array is expanded if necessary.
-     *
+     * <p>
      * Time Complexity:
      * O(1) amortized.
      * O(n) worst case when the internal array must be resized.
@@ -61,7 +61,7 @@ public class DynamicArray<T> implements List<T> {
      * Inserts an element at the specified index.
      * Elements from that index onward are shifted one position to the right.
      * Valid indices are from 0 to size, inclusive.
-     *
+     * <p>
      * Time Complexity: O(n)
      * because elements may need to be shifted.
      */
@@ -79,7 +79,7 @@ public class DynamicArray<T> implements List<T> {
 
     /**
      * Returns the element at the specified index.
-     *
+     * <p>
      * Time Complexity: O(1)
      * because arrays support direct random access.
      */
@@ -91,7 +91,7 @@ public class DynamicArray<T> implements List<T> {
 
     /**
      * Replaces the element at the specified index and returns the previous element.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     @Override
@@ -107,7 +107,7 @@ public class DynamicArray<T> implements List<T> {
     /**
      * Removes and returns the element at the specified index.
      * All elements after it are shifted one position to the left.
-     *
+     * <p>
      * Time Complexity: O(n)
      * because elements may need to be shifted.
      */
@@ -129,7 +129,7 @@ public class DynamicArray<T> implements List<T> {
     /**
      * Removes the first occurrence of the specified element.
      * Returns true if an element was removed, otherwise false.
-     *
+     * <p>
      * Time Complexity: O(n),
      * because the element must first be searched for and
      * elements may then need to be shifted.
@@ -146,7 +146,7 @@ public class DynamicArray<T> implements List<T> {
 
     /**
      * Returns the number of elements currently stored in the list.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     @Override
@@ -156,7 +156,7 @@ public class DynamicArray<T> implements List<T> {
 
     /**
      * Returns true if the list contains no elements.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     @Override
@@ -166,7 +166,7 @@ public class DynamicArray<T> implements List<T> {
 
     /**
      * Returns true if the specified element exists in the list.
-     *
+     * <p>
      * Time Complexity: O(n)
      * because in the worst case every element must be checked.
      */
@@ -178,7 +178,7 @@ public class DynamicArray<T> implements List<T> {
     /**
      * Returns the index of the first occurrence of the specified element.
      * Returns -1 if the element does not exist in the list.
-     *
+     * <p>
      * Time Complexity: O(n)
      * because the array may need to be scanned completely.
      */
@@ -193,7 +193,7 @@ public class DynamicArray<T> implements List<T> {
 
     /**
      * Removes all elements from the list.
-     *
+     * <p>
      * Time Complexity: O(n)
      */
     @Override
@@ -210,7 +210,7 @@ public class DynamicArray<T> implements List<T> {
     /**
      * Ensures that there is enough space for at least one more element.
      * If the internal array is full, its capacity is doubled.
-     *
+     * <p>
      * Time Complexity:
      * O(1) if no resize is required.
      * O(n) if the array must be resized and copied.
@@ -238,7 +238,7 @@ public class DynamicArray<T> implements List<T> {
     /**
      * Verifies that an index refers to an existing element.
      * Valid range: 0 <= index < size
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     private void checkElementIndex(int index) {
@@ -251,7 +251,7 @@ public class DynamicArray<T> implements List<T> {
      * Valid range: 0 <= index <= size
      * Notice that index == size is valid because it represents
      * inserting an element at the end of the list.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     private void checkPositionIndex(int index) {

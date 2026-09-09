@@ -21,7 +21,7 @@ public class QueueStack<T> implements Stack<T> {
 
     /**
      * Creates an empty stack.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     public QueueStack() {
@@ -34,7 +34,7 @@ public class QueueStack<T> implements Stack<T> {
 
     /**
      * Adds an element to the top of the stack.
-     *
+     * <p>
      * Time Complexity: O(n)
      */
     @Override
@@ -55,7 +55,7 @@ public class QueueStack<T> implements Stack<T> {
 
     /**
      * Removes and returns the top element of the stack.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     @Override
@@ -69,7 +69,7 @@ public class QueueStack<T> implements Stack<T> {
 
     /**
      * Returns the top element without removing it.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     @Override
@@ -83,7 +83,7 @@ public class QueueStack<T> implements Stack<T> {
 
     /**
      * Returns the number of elements in the stack.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     @Override
@@ -93,7 +93,7 @@ public class QueueStack<T> implements Stack<T> {
 
     /**
      * Checks whether the stack is empty.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     @Override

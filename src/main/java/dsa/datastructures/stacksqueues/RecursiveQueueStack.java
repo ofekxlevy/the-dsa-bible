@@ -19,7 +19,7 @@ public class RecursiveQueueStack<T> implements Stack<T> {
 
     /**
      * Creates an empty stack.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     public RecursiveQueueStack() {
@@ -31,7 +31,7 @@ public class RecursiveQueueStack<T> implements Stack<T> {
 
     /**
      * Adds an element to the stack.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     @Override
@@ -41,7 +41,7 @@ public class RecursiveQueueStack<T> implements Stack<T> {
 
     /**
      * Removes and returns the most recently inserted element.
-     *
+     * <p>
      * Time Complexity: O(n)
      * Space Complexity: O(n) because of recursion
      */
@@ -66,7 +66,7 @@ public class RecursiveQueueStack<T> implements Stack<T> {
 
     /**
      * Returns the top element without removing it.
-     *
+     * <p>
      * Time Complexity: O(n)
      * Space Complexity: O(n)
      */

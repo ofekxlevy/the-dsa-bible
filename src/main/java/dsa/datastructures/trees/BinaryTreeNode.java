@@ -20,7 +20,7 @@ public class BinaryTreeNode<T> {
 
     /**
      * Creates a new leaf node.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     public BinaryTreeNode(T data) {
@@ -34,7 +34,7 @@ public class BinaryTreeNode<T> {
 
     /**
      * Returns the value stored in the node.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     public T getData() {
@@ -43,7 +43,7 @@ public class BinaryTreeNode<T> {
 
     /**
      * Returns the left child.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     public BinaryTreeNode<T> getLeft() {
@@ -52,7 +52,7 @@ public class BinaryTreeNode<T> {
 
     /**
      * Returns the right child.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     public BinaryTreeNode<T> getRight() {

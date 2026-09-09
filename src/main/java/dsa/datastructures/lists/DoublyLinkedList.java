@@ -34,7 +34,7 @@ public class DoublyLinkedList<T> implements List<T> {
     // -------- constructor --------
     /**
      * Creates an empty doubly linked list.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     public DoublyLinkedList() {
@@ -48,7 +48,7 @@ public class DoublyLinkedList<T> implements List<T> {
 
     /**
      * Adds an element to the end of the list.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     @Override
@@ -71,7 +71,7 @@ public class DoublyLinkedList<T> implements List<T> {
     /**
      * Inserts an element at the specified index.
      * Valid indices: 0 <= index <= size.
-     *
+     * <p>
      * Time Complexity: O(n)
      * because we may need to traverse the list.
      */
@@ -101,7 +101,7 @@ public class DoublyLinkedList<T> implements List<T> {
 
     /**
      * Returns the element at the specified index.
-     *
+     * <p>
      * Time Complexity: O(n)
      * Traversal begins from either head or tail,
      * depending on which is closer to the requested index.
@@ -115,7 +115,7 @@ public class DoublyLinkedList<T> implements List<T> {
     /**
      * Replaces the element at the specified index
      * and returns the previous element.
-     *
+     * <p>
      * Time Complexity: O(n)
      */
     @Override
@@ -131,7 +131,7 @@ public class DoublyLinkedList<T> implements List<T> {
 
     /**
      * Removes and returns the element at the specified index.
-     *
+     * <p>
      * Time Complexity: O(n)
      * because locating the node may require traversal.
      * Once the node is found, unlinking it is O(1).
@@ -150,7 +150,7 @@ public class DoublyLinkedList<T> implements List<T> {
 
     /**
      * Removes the first occurrence of the specified element.
-     *
+     * <p>
      * Time Complexity: O(n)
      */
     @Override
@@ -171,7 +171,7 @@ public class DoublyLinkedList<T> implements List<T> {
 
     /**
      * Returns the number of elements in the list.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     @Override
@@ -181,7 +181,7 @@ public class DoublyLinkedList<T> implements List<T> {
 
     /**
      * Returns true if the list contains no elements.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     @Override
@@ -191,7 +191,7 @@ public class DoublyLinkedList<T> implements List<T> {
 
     /**
      * Returns true if the specified element exists in the list.
-     *
+     * <p>
      * Time Complexity: O(n)
      */
     @Override
@@ -202,7 +202,7 @@ public class DoublyLinkedList<T> implements List<T> {
     /**
      * Returns the index of the first occurrence of the element.
      * Returns -1 if the element does not exist.
-     *
+     * <p>
      * Time Complexity: O(n)
      */
     @Override
@@ -223,12 +223,10 @@ public class DoublyLinkedList<T> implements List<T> {
 
     /**
      * Removes all elements from the list.
-     *
+     * <p>
      * Time Complexity: O(1)
-     *
-     * Removing the references from head and tail makes
-     * the chain unreachable from the list, allowing Java's
-     * garbage collector to reclaim the nodes.
+     * Removing the references from head and tail makes the chain unreachable from the list,
+     * allowing Java's garbage collector to reclaim the nodes.
      */
     @Override
     public void clear() {
@@ -239,7 +237,7 @@ public class DoublyLinkedList<T> implements List<T> {
 
     /**
      * Returns the first element in the list.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     public T getFirst() {
@@ -251,7 +249,7 @@ public class DoublyLinkedList<T> implements List<T> {
 
     /**
      * Returns the last element in the list.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     public T getLast() {
@@ -263,7 +261,7 @@ public class DoublyLinkedList<T> implements List<T> {
 
     /**
      * Adds an element to the beginning of the list.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     public void addFirst(T element) {
@@ -284,7 +282,7 @@ public class DoublyLinkedList<T> implements List<T> {
 
     /**
      * Adds an element to the end of the list.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     public void addLast(T element) {
@@ -305,7 +303,7 @@ public class DoublyLinkedList<T> implements List<T> {
 
     /**
      * Removes and returns the first element in the list.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     public T removeFirst() {
@@ -329,7 +327,7 @@ public class DoublyLinkedList<T> implements List<T> {
 
     /**
      * Removes and returns the last element in the list.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     public T removeLast() {
@@ -358,7 +356,7 @@ public class DoublyLinkedList<T> implements List<T> {
      * Returns the node at the specified index.
      * If the index is in the first half, traversal starts from the head.
      * Otherwise, it starts from the tail.
-     *
+     * <p>
      * Time Complexity: O(n).
      */
     private Node<T> getNode(int index) {
@@ -381,10 +379,9 @@ public class DoublyLinkedList<T> implements List<T> {
 
     /**
      * Disconnects a node from the list.
-     *
+     * <p>
      * Time Complexity: O(1)
-     * because the node already contains references
-     * to both its predecessor and successor.
+     * because the node already contains references to both its predecessor and successor.
      */
     private void unlink(Node<T> node) {
         if (node.prev == null)
@@ -403,7 +400,7 @@ public class DoublyLinkedList<T> implements List<T> {
     /**
      * Checks whether the index refers to an existing element.
      * Valid range: 0 <= index < size.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     private void checkElementIndex(int index) {
@@ -415,7 +412,7 @@ public class DoublyLinkedList<T> implements List<T> {
     /**
      * Checks whether the index is a valid insertion position.
      * Valid range: 0 <= index <= size.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     private void checkPositionIndex(int index) {

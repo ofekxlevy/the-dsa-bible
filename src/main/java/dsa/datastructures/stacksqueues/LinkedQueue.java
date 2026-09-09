@@ -20,7 +20,7 @@ public class LinkedQueue<T> implements Queue<T> {
 
     /**
      * Creates an empty queue.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     public LinkedQueue() {
@@ -32,7 +32,7 @@ public class LinkedQueue<T> implements Queue<T> {
 
     /**
      * Adds an element to the end of the queue.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     @Override
@@ -42,7 +42,7 @@ public class LinkedQueue<T> implements Queue<T> {
 
     /**
      * Removes and returns the element at the front of the queue.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     @Override
@@ -55,7 +55,7 @@ public class LinkedQueue<T> implements Queue<T> {
 
     /**
      * Returns the element at the front without removing it.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     @Override
@@ -68,7 +68,7 @@ public class LinkedQueue<T> implements Queue<T> {
 
     /**
      * Returns the number of elements in the queue.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     @Override
@@ -78,7 +78,7 @@ public class LinkedQueue<T> implements Queue<T> {
 
     /**
      * Checks whether the queue is empty.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     @Override

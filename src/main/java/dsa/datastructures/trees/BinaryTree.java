@@ -35,7 +35,7 @@ public class BinaryTree<T> {
 
     /**
      * Creates a binary tree with one root node.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     public BinaryTree(T rootValue) {
@@ -49,7 +49,7 @@ public class BinaryTree<T> {
 
     /**
      * Returns the root.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     public BinaryTreeNode<T> getRoot() {
@@ -58,7 +58,7 @@ public class BinaryTree<T> {
 
     /**
      * Returns the number of nodes.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     public int size() {
@@ -67,7 +67,7 @@ public class BinaryTree<T> {
 
     /**
      * Returns true if the tree is empty.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     public boolean isEmpty() {
@@ -76,7 +76,7 @@ public class BinaryTree<T> {
 
     /**
      * Inserts a value into a random position in the tree.
-     *
+     * <p>
      * Time Complexity: O(h)
      * Worst Case: O(n)
      */
@@ -107,7 +107,7 @@ public class BinaryTree<T> {
      * Returns true if the tree contains the given value.
      * Since the tree is not ordered,
      * both subtrees may need to be searched.
-     *
+     * <p>
      * Time Complexity: O(n)
      * Space Complexity: O(h)
      */
@@ -127,7 +127,7 @@ public class BinaryTree<T> {
 
     /**
      * Finds and returns the first node containing the value.
-     *
+     * <p>
      * Time Complexity: O(n)
      * Space Complexity: O(h)
      */
@@ -155,7 +155,7 @@ public class BinaryTree<T> {
      * Definition:
      * empty tree = -1
      * leaf = 0
-     *
+     * <p>
      * Time Complexity: O(n)
      * Space Complexity: O(h)
      */
@@ -174,7 +174,7 @@ public class BinaryTree<T> {
     /**
      * Returns preorder traversal:
      * Root -> Left -> Right
-     *
+     * <p>
      * Time Complexity: O(n)
      * Space Complexity: O(h)
      */
@@ -196,7 +196,7 @@ public class BinaryTree<T> {
     /**
      * Returns inorder traversal:
      * Left -> Root -> Right
-     *
+     * <p>
      * Time Complexity: O(n)
      * Space Complexity: O(h)
      */
@@ -218,7 +218,7 @@ public class BinaryTree<T> {
     /**
      * Returns postorder traversal:
      * Left -> Right -> Root
-     *
+     * <p>
      * Time Complexity: O(n)
      * Space Complexity: O(h)
      */
@@ -239,7 +239,7 @@ public class BinaryTree<T> {
 
     /**
      * Counts the number of nodes recursively.
-     *
+     * <p>
      * Time Complexity: O(n)
      */
     public int countNodes() {
@@ -255,7 +255,7 @@ public class BinaryTree<T> {
 
     /**
      * Counts the number of leaves.
-     *
+     * <p>
      * Time Complexity: O(n)
      */
     public int countLeaves() {
@@ -274,7 +274,7 @@ public class BinaryTree<T> {
 
     /**
      * Clears the tree.
-     *
+     * <p>
      * Time Complexity: O(1)
      * The disconnected nodes will be handled
      * by Java's garbage collector.

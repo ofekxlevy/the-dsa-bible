@@ -32,7 +32,7 @@ public class SinglyLinkedList<T> implements List<T> {
 
     /**
      * Creates an empty singly linked list.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     public SinglyLinkedList() {
@@ -46,7 +46,7 @@ public class SinglyLinkedList<T> implements List<T> {
 
     /**
      * Adds an element to the end of the list.
-     *
+     * <p>
      * Time Complexity: O(1)
      * because we maintain a reference to the tail.
      */
@@ -69,7 +69,7 @@ public class SinglyLinkedList<T> implements List<T> {
     /**
      * Inserts an element at the specified index.
      * Valid indices: 0 <= index <= size.
-     *
+     * <p>
      * Time Complexity: O(n)
      * because we may need to traverse the list to find
      * the node before the insertion position.
@@ -102,7 +102,7 @@ public class SinglyLinkedList<T> implements List<T> {
 
     /**
      * Returns the element at the specified index.
-     *
+     * <p>
      * Time Complexity: O(n)
      * because linked lists do not support direct random access.
      */
@@ -116,7 +116,7 @@ public class SinglyLinkedList<T> implements List<T> {
     /**
      * Replaces the element at the specified index
      * and returns the previous element.
-     *
+     * <p>
      * Time Complexity: O(n)
      * because we must traverse the list to reach the node.
      */
@@ -134,7 +134,7 @@ public class SinglyLinkedList<T> implements List<T> {
 
     /**
      * Removes and returns the element at the specified index.
-     *
+     * <p>
      * Time Complexity: O(n)
      */
     @Override
@@ -170,7 +170,7 @@ public class SinglyLinkedList<T> implements List<T> {
 
     /**
      * Removes the first occurrence of the specified element.
-     *
+     * <p>
      * Time Complexity: O(n)
      * because the list may need to be scanned completely.
      */
@@ -203,7 +203,7 @@ public class SinglyLinkedList<T> implements List<T> {
 
     /**
      * Returns the number of elements in the list.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     @Override
@@ -213,7 +213,7 @@ public class SinglyLinkedList<T> implements List<T> {
 
     /**
      * Returns true if the list contains no elements.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     @Override
@@ -223,7 +223,7 @@ public class SinglyLinkedList<T> implements List<T> {
 
     /**
      * Returns true if the specified element exists in the list.
-     *
+     * <p>
      * Time Complexity: O(n)
      */
     @Override
@@ -234,7 +234,7 @@ public class SinglyLinkedList<T> implements List<T> {
     /**
      * Returns the index of the first occurrence of the element.
      * Returns -1 if it does not exist.
-     *
+     * <p>
      * Time Complexity: O(n)
      */
     @Override
@@ -255,7 +255,7 @@ public class SinglyLinkedList<T> implements List<T> {
 
     /**
      * Removes all elements from the list.
-     *
+     * <p>
      * Time Complexity: O(1)
      * Once head and tail no longer reference the nodes,
      * the nodes become unreachable and can be collected
@@ -270,7 +270,7 @@ public class SinglyLinkedList<T> implements List<T> {
 
     /**
      * Returns the first element in the list.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     public T getFirst() {
@@ -282,7 +282,7 @@ public class SinglyLinkedList<T> implements List<T> {
 
     /**
      * Adds an element to the beginning of the list.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     public void addFirst(T element) {
@@ -298,7 +298,7 @@ public class SinglyLinkedList<T> implements List<T> {
 
     /**
      * Removes and returns the first element in the list.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     public T removeFirst() {
@@ -323,7 +323,7 @@ public class SinglyLinkedList<T> implements List<T> {
 
     /**
      * Returns the node at the specified index.
-     *
+     * <p>
      * Time Complexity: O(n)
      */
     private Node<T> getNode(int index) {
@@ -338,7 +338,7 @@ public class SinglyLinkedList<T> implements List<T> {
     /**
      * Checks whether the index refers to an existing element.
      * Valid range: 0 <= index < size.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     private void checkElementIndex(int index) {
@@ -348,9 +348,8 @@ public class SinglyLinkedList<T> implements List<T> {
 
     /**
      * Checks whether the index is a valid insertion position.
-     *
      * Valid range: 0 <= index <= size.
-     *
+     * <p>
      * Time Complexity: O(1)
      */
     private void checkPositionIndex(int index) {

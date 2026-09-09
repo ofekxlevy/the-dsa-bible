@@ -250,7 +250,7 @@ public class BinarySearchTree<T extends Comparable<? super T>> extends BinaryTre
 
         int comparison = value.compareTo(node.data);
 
-        if (comparison > 0) 
+        if (comparison > 0)
             return predecessor(node.right, value, node);
 
         return predecessor(node.left, value, candidate);
