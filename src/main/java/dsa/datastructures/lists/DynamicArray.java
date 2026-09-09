@@ -62,7 +62,8 @@ public class DynamicArray<T> implements List<T> {
      * Elements from that index onward are shifted one position to the right.
      * Valid indices are from 0 to size, inclusive.
      *
-     * Time Complexity: O(n), because elements may need to be shifted.
+     * Time Complexity: O(n)
+     * because elements may need to be shifted.
      */
     @Override
     public void add(int index, T element) {
@@ -79,7 +80,8 @@ public class DynamicArray<T> implements List<T> {
     /**
      * Returns the element at the specified index.
      *
-     * Time Complexity: O(1), because arrays support direct random access.
+     * Time Complexity: O(1)
+     * because arrays support direct random access.
      */
     @Override
     public T get(int index) {
@@ -106,7 +108,8 @@ public class DynamicArray<T> implements List<T> {
      * Removes and returns the element at the specified index.
      * All elements after it are shifted one position to the left.
      *
-     * Time Complexity: O(n), because elements may need to be shifted.
+     * Time Complexity: O(n)
+     * because elements may need to be shifted.
      */
     @Override
     public T remove(int index) {
@@ -164,7 +167,8 @@ public class DynamicArray<T> implements List<T> {
     /**
      * Returns true if the specified element exists in the list.
      *
-     * Time Complexity: O(n), because in the worst case every element must be checked.
+     * Time Complexity: O(n)
+     * because in the worst case every element must be checked.
      */
     @Override
     public boolean contains(T element) {
@@ -175,7 +179,8 @@ public class DynamicArray<T> implements List<T> {
      * Returns the index of the first occurrence of the specified element.
      * Returns -1 if the element does not exist in the list.
      *
-     * Time Complexity: O(n), because the array may need to be scanned completely.
+     * Time Complexity: O(n)
+     * because the array may need to be scanned completely.
      */
     @Override
     public int indexOf(T element) {

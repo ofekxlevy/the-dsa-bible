@@ -283,7 +283,7 @@ public class BinaryTree<T> {
         root = null;
         size = 0;
     }
-    
+
 
     // -------- helper --------
 
