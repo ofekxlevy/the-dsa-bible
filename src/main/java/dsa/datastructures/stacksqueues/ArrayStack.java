@@ -59,7 +59,7 @@ public class ArrayStack<T> implements Stack<T> {
      */
     @Override
     public T peek() {
-        if (isEmpty()) 
+        if (isEmpty())
             throw new NoSuchElementException("Stack is empty");
 
         return elements.get(elements.size() - 1);
