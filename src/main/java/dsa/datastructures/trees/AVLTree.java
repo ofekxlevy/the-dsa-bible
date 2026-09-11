@@ -12,8 +12,7 @@ package dsa.datastructures.trees;
  *
  * @param <T> the type of values stored in the tree
  */
-public class AVLTree<T extends Comparable<? super T>>
-        extends BinarySearchTree<T> {
+public class AVLTree<T extends Comparable<? super T>> extends BinarySearchTree<T> {
 
     // -------- constructor --------
 
