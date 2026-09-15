@@ -77,4 +77,12 @@ public interface Graph {
      *         false if it is undirected
      */
     boolean isDirected();
+
+    /**
+     * Returns all edges in the graph.
+     * In an undirected graph, each edge appears exactly once.
+     *
+     * @return a list containing all edges in the graph
+     */
+    List<Edge> getEdges();
 }
