@@ -6,7 +6,7 @@ package dsa.datastructures.hashtables;
  * are mapped to the same bucket, they are stored in the same linked list.
  * The table automatically grows when its load factor exceeds the maximum
  * allowed load factor.
- * <P>
+ * <p>
  * Average time complexity:
  * put      - O(1)
  * get      - O(1)
@@ -52,7 +52,7 @@ public class ChainedHashTable<K, V> implements HashTable<K, V> {
 
     /**
      * Creates an empty hash table with the default capacity.
-     * <P>
+     * <p>
      * Time complexity: O(m), where m is the initial number of buckets.
      */
     @SuppressWarnings("unchecked")
@@ -66,7 +66,7 @@ public class ChainedHashTable<K, V> implements HashTable<K, V> {
      *
      * @param initialCapacity the initial number of buckets
      * @throws IllegalArgumentException if initialCapacity is not positive
-     * <P>
+     * <p>
      * Time complexity: O(m), where m is the requested number of buckets.
      */
     @SuppressWarnings("unchecked")
@@ -86,13 +86,13 @@ public class ChainedHashTable<K, V> implements HashTable<K, V> {
      * If the key already exists, its current value is replaced.
      * Otherwise, a new entry is inserted at the beginning of the appropriate
      * bucket's linked list.
-     * <P>
+     * <p>
      * The table is resized when inserting a new entry would cause the
      * load factor to exceed the maximum allowed load factor.
      *
      * @return the previous value associated with the key,
      *         or null if the key was not previously present
-     * <P>
+     * <p>
      * Average time complexity: O(1).
      * Worst-case time complexity: O(n).
      * Resizing takes O(n), but because resizing happens only occasionally,
@@ -129,7 +129,7 @@ public class ChainedHashTable<K, V> implements HashTable<K, V> {
      * Returns the value associated with the specified key.
      *
      * @return the associated value, or null if the key is not present
-     * <P>
+     * <p>
      * Average time complexity: O(1).
      * Worst-case time complexity: O(n).
      */
@@ -151,7 +151,7 @@ public class ChainedHashTable<K, V> implements HashTable<K, V> {
      * Removes the entry associated with the specified key.
      *
      * @return the removed value, or null if the key is not present
-     * <P>
+     * <p>
      * Average time complexity: O(1).
      * Worst-case time complexity: O(n).
      */
@@ -182,7 +182,7 @@ public class ChainedHashTable<K, V> implements HashTable<K, V> {
 
     /**
      * Returns whether the table contains the specified key.
-     * <P>
+     * <p>
      * Average time complexity: O(1).
      * Worst-case time complexity: O(n).
      */
@@ -202,7 +202,7 @@ public class ChainedHashTable<K, V> implements HashTable<K, V> {
 
     /**
      * Returns the number of key-value pairs stored in the table.
-     * <P>
+     * <p>
      * Time complexity: O(1).
      */
     @Override
@@ -212,7 +212,7 @@ public class ChainedHashTable<K, V> implements HashTable<K, V> {
 
     /**
      * Returns whether the hash table contains no entries.
-     * <P>
+     * <p>
      * Time complexity: O(1).
      */
     @Override
@@ -222,7 +222,7 @@ public class ChainedHashTable<K, V> implements HashTable<K, V> {
 
     /**
      * Removes all entries from the hash table and restores the default capacity.
-     * <P>
+     * <p>
      * Time complexity: O(m), where m is the default number of buckets.
      */
     @Override
@@ -238,7 +238,7 @@ public class ChainedHashTable<K, V> implements HashTable<K, V> {
     /**
      * Calculates the bucket index for the specified key.
      * Null keys are supported and are always mapped to bucket 0.
-     * <P>
+     * <p>
      * Time complexity: O(1), assuming hashCode() runs in O(1).
      */
     private int indexFor(K key) {
@@ -250,7 +250,7 @@ public class ChainedHashTable<K, V> implements HashTable<K, V> {
 
     /**
      * Compares two keys while supporting null keys.
-     * <P>
+     * <p>
      * Time complexity: O(1), assuming equals() runs in O(1).
      */
     private boolean keysEqual(K first, K second) {
@@ -265,7 +265,7 @@ public class ChainedHashTable<K, V> implements HashTable<K, V> {
      * according to the new capacity.
      * Rehashing is necessary because a bucket index depends on the
      * number of buckets.
-     * <P>
+     * <p>
      * Time complexity: O(n + m), where n is the number of stored entries
      * and m is the new capacity.
      */
