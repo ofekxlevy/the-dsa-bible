@@ -1,7 +1,6 @@
 package dsa.algorithms.graph.basic;
 
 import dsa.datastructures.graphs.Graph;
-import dsa.datastructures.lists.List;
 import dsa.datastructures.stacksqueues.Queue;
 import dsa.datastructures.stacksqueues.LinkedQueue;
 import dsa.datastructures.iterators.Iterator;
