@@ -140,7 +140,7 @@ public class BucketSort {
      * @param value the value to validate
      */
     private void validateValue(double value) {
-        if (value < 0.0 || value >= 1.0 || Double.isNaN(value)) 
+        if (value < 0.0 || value >= 1.0 || Double.isNaN(value))
             throw new IllegalArgumentException("Bucket Sort requires values in [0, 1).");
     }
 }
