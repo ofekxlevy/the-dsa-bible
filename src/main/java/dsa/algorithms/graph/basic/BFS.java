@@ -4,6 +4,7 @@ import dsa.datastructures.graphs.Graph;
 import dsa.datastructures.lists.List;
 import dsa.datastructures.stacksqueues.Queue;
 import dsa.datastructures.stacksqueues.LinkedQueue;
+import dsa.datastructures.iterators.Iterator;
 
 /**
  * Breadth-First Search (BFS).
@@ -114,11 +115,11 @@ public class BFS {
         // Continue until there are no more discovered vertices waiting to be processed.
         while (!queue.isEmpty()) {
             int u = queue.dequeue();
-            List<Integer> neighbors = graph.getNeighbors(u);
+            Iterator<Integer> iterator = graph.getNeighbors(u).iterator();
 
             // Explore every neighbor of u.
-            for (int i = 0; i < neighbors.size(); i++) {
-                int v = neighbors.get(i);
+            while (iterator.hasNext()) {
+                int v = iterator.next();;
 
                 // A WHITE vertex has not been discovered yet.
                 // The first time BFS discovers v, it has found a shortest path from the source to v.
