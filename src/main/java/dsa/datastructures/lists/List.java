@@ -1,6 +1,8 @@
 package dsa.datastructures.lists;
 
-public interface List<T> {
+import dsa.datastructures.iterators.Iterable;
+
+public interface List<T> extends Iterable<T> {
 
     // Adds an element to the end of the list
     void add(T element);

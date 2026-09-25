@@ -1,6 +1,7 @@
 package dsa.datastructures.lists;
 
 import java.util.Objects;
+import dsa.datastructures.iterators.Iterator;
 
 public class DynamicArray<T> implements List<T> {
 
@@ -257,5 +258,38 @@ public class DynamicArray<T> implements List<T> {
     private void checkPositionIndex(int index) {
         if (index < 0 || index > size)
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+    }
+
+
+    // -------- iterator --------
+
+    @Override
+    public Iterator<T> iterator() {
+        return new DynamicArrayIterator();
+    }
+
+    /**
+     * Iterator over the elements of the dynamic array.
+     * The iterator traverses the elements from index 0 up to size - 1.
+     * Each call to next() advances the iterator by one position.
+     * hasNext(): O(1)
+     * next(): O(1)
+     */
+    private class DynamicArrayIterator implements Iterator<T> {
+
+        private int currentIndex = 0;
+
+        @Override
+        public boolean hasNext() {
+            return currentIndex < size;
+        }
+
+        @Override
+        public T next() {
+            if (!hasNext())
+                throw new IllegalStateException("No more elements in the iterator.");
+
+            return elements[currentIndex++];
+        }
     }
 }

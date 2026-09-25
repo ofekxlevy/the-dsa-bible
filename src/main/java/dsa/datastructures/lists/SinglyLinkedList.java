@@ -1,6 +1,7 @@
 package dsa.datastructures.lists;
 
 import java.util.Objects;
+import dsa.datastructures.iterators.Iterator;
 
 public class SinglyLinkedList<T> implements List<T> {
 
@@ -355,5 +356,77 @@ public class SinglyLinkedList<T> implements List<T> {
     private void checkPositionIndex(int index) {
         if (index < 0 || index > size)
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+    }
+
+
+    // -------- Iterator --------
+
+    /**
+     * Returns an iterator that traverses the list from head to tail.
+     * The iterator starts at the first node and advances by following
+     * the next reference of each node.
+     * Creating the iterator: O(1)
+     *
+     * @return an iterator over the elements of the list
+     */
+    @Override
+    public Iterator<T> iterator() {
+        return new SinglyLinkedListIterator();
+    }
+
+    /**
+     * Iterator for the singly linked list.
+     * The iterator keeps a reference to the next node whose value
+     * should be returned.
+     * Since moving to the next element only requires following
+     * one next reference, both hasNext() and next() run in O(1).
+     * Traversing the entire list therefore takes O(n).
+     */
+    private class SinglyLinkedListIterator implements Iterator<T> {
+
+        /**
+         * The next node to be returned by the iterator.
+         */
+        private Node<T> current;
+
+        /**
+         * Creates an iterator positioned at the beginning of the list.
+         */
+        public SinglyLinkedListIterator() {
+            current = head;
+        }
+
+        /**
+         * Checks whether another element remains in the traversal.
+         *
+         * @return true if another element exists, false otherwise
+         *
+         * Time Complexity: O(1)
+         */
+        @Override
+        public boolean hasNext() {
+            return current != null;
+        }
+
+        /**
+         * Returns the current element and advances the iterator
+         * to the next node.
+         *
+         * @return the next element in the list
+         *
+         * @throws IllegalStateException if no elements remain
+         *
+         * Time Complexity: O(1)
+         */
+        @Override
+        public T next() {
+            if (!hasNext())
+                throw new IllegalStateException("No more elements in the iterator.");
+
+            T value = current.data;
+            current = current.next;
+
+            return value;
+        }
     }
 }
