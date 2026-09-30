@@ -46,6 +46,19 @@ public interface WeightedGraph {
     boolean containsEdge(int from, int to);
 
     /**
+     * Returns the weight of the edge between two vertices.
+     * In a directed graph, returns the weight of the edge
+     * from {@code from} to {@code to}.
+     *
+     * @param from the source vertex
+     * @param to   the destination vertex
+     * @return the weight of the edge
+     * @throws IllegalArgumentException if either vertex is invalid
+     *                                  or the edge does not exist
+     */
+    double getWeight(int from, int to);
+    
+    /**
      * Returns the weighted edges adjacent to the given vertex.
      * In a directed graph, these are the outgoing edges from the given vertex.
      * In an undirected graph, these are all edges incident to the given vertex.
