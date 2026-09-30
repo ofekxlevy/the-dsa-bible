@@ -4,8 +4,7 @@ import dsa.datastructures.lists.List;
 
 /**
  * Represents a weighted graph with a fixed set of vertices: {1, 2, ..., n}.
- * The number of vertices is determined when the graph is created
- * and cannot be changed afterward.
+ * The number of vertices is determined when the graph is created and cannot be changed afterward.
  * Every edge has an associated weight.
  * The graph may be directed or undirected, depending on the implementation.
  */
@@ -47,17 +46,16 @@ public interface WeightedGraph {
     boolean containsEdge(int from, int to);
 
     /**
-     * Returns the weighted edges leaving the given vertex.
-     * In a directed graph, these are the outgoing edges.
-     * In an undirected graph, these are all edges incident
-     * to the given vertex, represented as edges whose
-     * {@code from} vertex is the requested vertex.
+     * Returns the weighted edges adjacent to the given vertex.
+     * In a directed graph, these are the outgoing edges from the given vertex.
+     * In an undirected graph, these are all edges incident to the given vertex.
+     * Each returned edge is represented with the requested vertex as its source.
      *
      * @param vertex the vertex whose adjacent edges are requested
      * @return a list containing the weighted edges adjacent
      *         to the vertex
      */
-    List<WeightedEdge> getNeighbors(int vertex);
+    List<WeightedEdge> getAdjacentEdges(int vertex);
 
     /**
      * Returns all weighted edges in the graph.
