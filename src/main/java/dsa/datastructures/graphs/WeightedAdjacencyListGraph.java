@@ -6,20 +6,12 @@ import dsa.datastructures.lists.SinglyLinkedList;
 /**
  * Represents a weighted graph using adjacency lists.
  * The graph has a fixed set of vertices: {1, 2, ..., n}.
- *
- * Each vertex has a linked list containing the weighted edges
- * adjacent to it.
- *
+ * Each vertex has a linked list containing the weighted edges adjacent to it.
  * The graph may be directed or undirected.
  * Parallel edges and self-loops are not allowed.
- *
  * In an undirected graph, each edge is stored twice:
  * once in each endpoint's adjacency list.
- *
- * For example, an undirected edge (u, v, w) is stored as:
- * (u, v, w) in u's adjacency list and
- * (v, u, w) in v's adjacency list.
- *
+ * <p>
  * Space complexity: O(V + E)
  */
 public class WeightedAdjacencyListGraph implements WeightedGraph {
