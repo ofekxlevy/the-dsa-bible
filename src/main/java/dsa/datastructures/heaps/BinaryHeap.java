@@ -143,6 +143,54 @@ public class BinaryHeap<T> implements Heap<T> {
     }
 
     /**
+     * Replaces an existing value in the heap with a new value that has
+     * higher priority according to the heap's comparator.
+     * <p>
+     * This operation corresponds to the DecreaseKey operation of a
+     * min-priority queue. After replacing the value, the element may violate
+     * the heap property with respect to its parent, so it is moved upward
+     * using heapifyUp until the heap property is restored.
+     * <p>
+     * The new value must have higher or equal priority than the old value
+     * according to the comparator. In a min-heap, for example, this means
+     * that the new key must be smaller than or equal to the old key.
+     * <p>
+     * Time complexity:
+     * O(n) to locate the element in the heap, followed by O(log n)
+     * for heapifyUp. Therefore, the total running time is O(n).
+     *
+     * @param oldValue the value currently stored in the heap
+     * @param newValue the new value with higher or equal priority
+     *
+     * @throws IllegalArgumentException if oldValue does not exist in the heap
+     * @throws IllegalArgumentException if newValue has lower priority than oldValue
+     */
+    public void decreaseKey(T oldValue, T newValue) {
+        int index = -1;
+
+        // Find the current position of oldValue in the heap.
+        for (int i = 0; i < elements.size(); i++) {
+            if (elements.get(i).equals(oldValue)) {
+                index = i;
+                break;
+            }
+        }
+
+        if (index == -1)
+            throw new IllegalArgumentException("The specified value does not exist in the heap.");
+
+        // newValue must have higher or equal priority.
+        if (comparator.compare(newValue, oldValue) > 0)
+            throw new IllegalArgumentException("The new value must have higher or equal priority than the old value.");
+
+        elements.set(index, newValue);
+
+        // Since the priority was improved, the element can only violate the heap
+        // property with respect to its parent.
+        heapifyUp(index);
+    }
+
+    /**
      * Restores the heap property by moving an element upward.
      * The element is repeatedly compared with its parent.
      * If it has higher priority than its parent, the two are swapped.
