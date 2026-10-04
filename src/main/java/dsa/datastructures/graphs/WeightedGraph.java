@@ -57,7 +57,7 @@ public interface WeightedGraph {
      *                                  or the edge does not exist
      */
     double getWeight(int from, int to);
-    
+
     /**
      * Returns the weighted edges adjacent to the given vertex.
      * In a directed graph, these are the outgoing edges from the given vertex.
