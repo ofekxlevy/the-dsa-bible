@@ -11,7 +11,7 @@ package dsa.datastructures.graphs;
  * - In an undirected graph, the edge represents a connection
  *   between the two vertices with the given weight.
  */
-public class WeightedEdge {
+public class WeightedEdge implements Comparable<WeightedEdge> {
 
     // -------- fields --------
 
@@ -109,5 +109,21 @@ public class WeightedEdge {
     @Override
     public String toString() {
         return "(" + from + ", " + to + ", " + weight + ")";
+    }
+
+    /**
+     * Compares this edge with another weighted edge according to their weights.
+     * The natural ordering of weighted edges is by nondecreasing weight.
+     * This ordering is useful for algorithms such as Kruskal's algorithm,
+     * which processes edges from the lightest to the heaviest.
+     *
+     * @param other the weighted edge to compare with
+     * @return a negative value if this edge is lighter,
+     *         zero if both edges have the same weight,
+     *         or a positive value if this edge is heavier
+     */
+    @Override
+    public int compareTo(WeightedEdge other) {
+        return Double.compare(this.weight, other.weight);
     }
 }
