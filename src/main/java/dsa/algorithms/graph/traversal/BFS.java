@@ -1,4 +1,4 @@
-package dsa.algorithms.graph.basic;
+package dsa.algorithms.graph.traversal;
 
 import dsa.datastructures.graphs.Graph;
 import dsa.datastructures.stacksqueues.Queue;
